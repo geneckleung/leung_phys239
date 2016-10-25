@@ -142,13 +142,15 @@ def analyze(x0,y0,vx0,vy0,n,dt,draw=False):
         figtext(0.85,0.9,'FFT of a_y')
         figtext(0.6,0.4,'Squared sum of FFT of a_x and a_y')
     return peak
-    
+
+# Fixed initial velocity, different impact parameters
 p1 = analyze(-999., 80., 1e8, 0., int(1e5),5e-18)
 p2 = analyze(-999., 60., 1e8, 0., int(1e5),5e-18,draw=True)
 p3 = analyze(-999., 40., 1e8, 0., int(1e5),5e-18)
 p4 = analyze(-999., 20., 1e8, 0., int(1e5),5e-18)
 
 
+# Fixed impact parameters, different initial velocity
 p5 = analyze(-999., 50., 3e8, 0., int(1e5),5e-18)
 p6 = analyze(-999., 50., 2e8, 0., int(1e5),5e-18)
 p7 = analyze(-999., 50., 1e8, 0., int(1e5),5e-18)
